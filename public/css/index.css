@@ -1,0 +1,13 @@
+.edit-span .tags a{
+    margin-right: 5px;
+    display: inline-block;
+    border: 1px solid #bfbfbf;
+    border-radius: 999em;
+    padding: 0 10px;
+    line-height: 24px;
+    font-size: 12px;
+    text-decoration: none;
+    margin: 0 1px;
+    margin-bottom: 6px;
+    color: #bfbfbf !important;
+}
