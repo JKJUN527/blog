@@ -147,12 +147,18 @@ ul.top-nag  a.active{
 .top-menu ul {
     margin-top: 9em;
 }
+.full{
+    overflow: hidden;
+}
 .top-nav{
-       float: left;
-		background-color: #f26649;
-		width: 15%;
-	     padding: 3em 1em 95.6em 1em;
-		   position:absolute;
+    float: left;
+    background-color: #f26649;
+    width: 15%;
+    padding: 3em 1em 95.6em 1em;
+    /*position:absolute;*/
+    overflow: hidden;
+    margin-bottom: -10000px;
+    padding-bottom: 10000px;
 }
 .copyrights{
 	text-indent:-9999px;
@@ -310,6 +316,9 @@ nav a:focus {
 	float: right;
     width: 85%;
     padding: 0;
+    overflow: hidden;
+    margin-bottom: -10000px;
+    padding-bottom: 10000px;
 }
 .banner-section{
     width: 67%;
