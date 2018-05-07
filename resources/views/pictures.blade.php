@@ -9,7 +9,8 @@
     @include('components.headerTab',['title'=>"pictures"])
 @endsection
 @section('custom-style')
-    <link href="css/index.css" rel='stylesheet' type='text/css' />
+    <link href="css/picture.css" rel='stylesheet' type='text/css' />
+    <link href="css/picture.css" rel='stylesheet' type='text/css' />
     <style>
         .cs-style-1 figure:hover figcaption,
         .cs-style-1 figure.cs-hover figcaption {
@@ -25,7 +26,16 @@
     <div class="gallery-section">
         <h3 class="tittle">相片集 <i class="glyphicon glyphicon-film"></i></h3>
         <div class="categorie-grids cs-style-1">
-
+            <div class="menu_item">
+                <ul class="project-menu">
+                    <li class="filter item">所有</li>
+                    <li class="filter item" >红岩顶</li>
+                    <li class="filter item active">海螺沟</li>
+                    <li class="filter item" >川西小环线</li>
+                    <li class="filter item">甘孜环线</li>
+                    <li class="filter item">泸定</li>
+                </ul>
+            </div>
             <div class="col-md-4 cate-grid grid">
                 <figure>
                     <img src="images/gen2.jpg" alt="">
