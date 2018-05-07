@@ -10,15 +10,140 @@
 @endsection
 @section('custom-style')
     <link href="css/index.css" rel='stylesheet' type='text/css' />
+    <style>
+        .cs-style-1 figure:hover figcaption,
+        .cs-style-1 figure.cs-hover figcaption {
+            opacity: 1;
+            -webkit-transform: translate(15px, 15px);
+            -moz-transform: translate(15px, 15px);
+            -ms-transform: translate(15px, 15px);
+            transform: translate(15px, 15px);
+        }
+    </style>
 @endsection
 @section('content')
-    <p>个人相册</p>
+    <div class="gallery-section">
+        <h3 class="tittle">相片集 <i class="glyphicon glyphicon-film"></i></h3>
+        <div class="categorie-grids cs-style-1">
+
+            <div class="col-md-4 cate-grid grid">
+                <figure>
+                    <img src="images/gen2.jpg" alt="">
+                    <figcaption>
+                        <h3>Blogger</h3>
+                        <span>Accusantium Dolor</span>
+                        <a class="example-image-link" data-content="images/gen2.jpg" data-title="Blogger">VIEW</a>
+                    </figcaption>
+                </figure>
+            </div>
+            <div class="col-md-4 cate-grid grid">
+                <figure>
+                    <img src="images/gen1.jpg" alt="">
+                    <figcaption>
+                        <h3>Blogger</h3>
+                        <span>Accusantium Dolor</span>
+                        <a class="example-image-link" href="images/gen3.jpg" data-lightbox="example-1" data-title="Interior Design">VIEW</a>
+                    </figcaption>
+                </figure>
+            </div>
+
+
+            <div class="col-md-4 cate-grid grid">
+                <figure>
+                    <img src="images/gen3.jpg" alt="">
+                    <figcaption>
+                        <h3>Blogger</h3>
+                        <span>Accusantium Dolor</span>
+                        <a class="example-image-link" href="images/gen3.jpg" data-lightbox="example-1" data-title="Interior Design">VIEW</a>
+                    </figcaption>
+                </figure>
+            </div>
+
+            <div class="col-md-4 cate-grid grid">
+                <figure>
+                    <img src="images/gen4.jpg" alt="">
+                    <figcaption>
+                        <h3>Blogger</h3>
+                        <span>Accusantium Dolor</span>
+                        <a class="example-image-link" href="images/gen4.jpg" data-lightbox="example-1" data-title="Interior Design">VIEW</a>
+                    </figcaption>
+                </figure>
+            </div>
+
+            <div class="col-md-4 cate-grid grid">
+                <figure>
+                    <img src="images/gen5.jpg" alt="">
+                    <figcaption>
+                        <h3>Blogger</h3>
+                        <span>Accusantium Dolor</span>
+                        <a class="example-image-link" href="images/gen5.jpg" data-lightbox="example-1" data-title="Interior Design">VIEW</a>
+                    </figcaption>
+                </figure>
+            </div>
+
+            <div class="col-md-4 cate-grid grid">
+                <figure>
+                    <img src="images/gen6.jpg" alt="">
+                    <figcaption>
+                        <h3>Blogger</h3>
+                        <span>Accusantium Dolor</span>
+                        <a class="example-image-link" href="images/gen6.jpg" data-lightbox="example-1" data-title="Interior Design">VIEW</a>
+                    </figcaption>
+                </figure>
+            </div>
+            <div class="col-md-4 cate-grid grid">
+                <figure>
+                    <img src="images/gen1.jpg" alt="">
+                    <figcaption>
+                        <h3>Blogger</h3>
+                        <span>Accusantium Dolor</span>
+                        <a class="example-image-link" href="images/gen1.jpg" data-lightbox="example-1" data-title="Interior Design">VIEW</a>
+                    </figcaption>
+                </figure>
+            </div>
+            <div class="col-md-4 cate-grid grid">
+                <figure>
+                    <img src="images/gen3.jpg" alt="">
+                    <figcaption>
+                        <h3>Blogger</h3>
+                        <span>Accusantium Dolor</span>
+                        <a class="example-image-link" href="images/gen3.jpg" data-lightbox="example-1" data-title="Interior Design">VIEW</a>
+                    </figcaption>
+                </figure>
+            </div>
+            <div class="col-md-4 cate-grid grid">
+                <figure>
+                    <img src="images/gen2.jpg" alt="">
+                    <figcaption>
+                        <h3>Blogger</h3>
+                        <span>Accusantium Dolor</span>
+                        <a class="example-image-link" href="images/gen2.jpg" data-lightbox="example-1" data-title="Interior Design">VIEW</a>
+                    </figcaption>
+                </figure>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
 @endsection
 @section('footer')
     @include('components.footer')
 @endsection
 @section('custom-script')
+    {{--<script src="{{asset('js/lightbox.js')}}"></script>--}}
     <script>
-       
+        $(".cs-style-1 figcaption a").click(function () {
+            var doc = $(this);
+            var title = doc.attr("data-title");
+            var src = doc.attr("data-content");
+            swal({
+                title: '',
+                text: title,
+                imageUrl: src,
+                imageSize: "400x400",
+                animation: true, //控制是否有动画
+                showConfirmButton:false,
+                allowOutsideClick:true
+            })
+        });
     </script>
 @endsection
