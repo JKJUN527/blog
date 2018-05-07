@@ -6,7 +6,7 @@
 @endsection
 
 @section('header-tab')
-    @include('components.headerTab')
+    @include('components.headerTab',['title'=>"index"])
 @endsection
 @section('custom-style')
     <link href="css/index.css" rel='stylesheet' type='text/css' />

@@ -11,6 +11,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:700,700italic,800,300,300italic,400italic,400,600,600italic' rel='stylesheet' type='text/css'>
     <!--Custom-Theme-files-->
     <link href="css/style.css" rel='stylesheet' type='text/css' />
+    <link href="plugins/sweetalert/sweetalert.css" rel='stylesheet' type='text/css' />
+    <script src="plugins/sweetalert/sweetalert.min.js"> </script>
     <script src="js/jquery.min.js"> </script>
     <!--/script-->
     <script type="text/javascript" src="js/move-top.js"></script>
@@ -45,6 +47,28 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     });
     $(document).ready(function() {
         $().UItoTop({ easingType: 'easeOutQuart' });
+    });
+    $(".fb").click(function () {
+        swal({
+            title: '',
+            text: '微信二维码',
+            imageUrl: '{{asset('images/wechat.jpg')}}',
+            imageSize: "300x300",
+            animation: true, //控制是否有动画
+            confirmButtonText: '扫码立即添加好友',
+            confirmButtonColor: '#4cd964',
+        })
+    });
+    $(".twitt").click(function () {
+        swal({
+            title: '',
+            text: 'QQ二维码',
+            imageUrl: '{{asset('images/qq.jpg')}}',
+            imageSize: "300x300",
+            animation: true, //控制是否有动画
+            confirmButtonText: '扫码立即添加好友',
+            confirmButtonColor: '#4cd964',
+        })
     });
 </script>
 @section('custom-script')
